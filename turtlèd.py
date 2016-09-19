@@ -119,7 +119,7 @@ while command_counter<len(program):
             grid[coords[1]][coords[0]]=i
 
     elif command=="?":
-        var=int(0+input())
+        var=int("0"+input())
 
     elif command==":":
         for i in range(var):
