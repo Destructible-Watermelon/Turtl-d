@@ -39,3 +39,6 @@ just some things that work like those `-foo` things other languages might have, 
 |^|leave trailing spaces, usually removed|
 |%|leave leading and trailing new lines|
 
+Also here is a square number calculator:
+
+`?;d'0u[*'|:[|'_l]u][0d]u[*r{_r}l(|u)(_'-{-d}{ l}[ (0'1d)(1'2d)(2'3d)(3'4d)(4'5d)(5'6d)(6'7d)(7'8d)(8'9d)(9'0l( '0))]uu{ r})]' d{|[ ' r]dl[ l]r}`
