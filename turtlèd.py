@@ -244,17 +244,18 @@ while command_counter<len(program):
     command_counter+=1
 
 if not "$" in program:
-    while grid != [[]] and all(grid[i][0]==" " for i in range(len(grid))):
-        for i in range(len(grid)):
-            del grid[i][0]
+    while grid != [[]] and all(grid[l][0]==" " for l in range(len(grid))):
+        for l in range(len(grid)):
+            if grid[l][0]==" ":
+                del grid[l][0]
 if not "^" in program:
-    while grid != [[]] and any(grid[i][~0]==" " for i in range(len(grid))):
-        for i in range(len(grid)):
-            if grid[i][~0]==" ":
-                del grid[i][~0]
+    while grid != [[]] and any(grid[l][~0:]==[" "] for l in range(len(grid))):
+        for l in range(len(grid)):
+            if grid[l][~0]==" ":
+                del grid[l][~0]
 if not "%" in program and grid != [[]]:
-    while grid != [] and all(grid[0][i]==" " for i in range(len(grid[0]))):
+    while grid != [] and all(grid[0][l]==" " for l in range(len(grid[0]))):
             del grid[0]
-    while grid != [] and all(grid[~0][i]==" " for i in range(len(grid[~0]))):
+    while grid != [] and all(grid[~0][l]==" " for l in range(len(grid[~0]))):
             del grid[~0]
-print('\n'.join(''.join(i for i in j)for j in grid))
+print('\n'.join(''.join(k for k in j)for j in grid))
