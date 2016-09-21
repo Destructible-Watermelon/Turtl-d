@@ -242,17 +242,19 @@ while command_counter<len(program):
         else:
             grid[coords[1]][coords[0]]=" "
     command_counter+=1
+
 if not "$" in program:
-    while all(grid[i][0]==" " for i in range(len(grid))):
+    while grid != [[]] and all(grid[i][0]==" " for i in range(len(grid))):
         for i in range(len(grid)):
             del grid[i][0]
 if not "^" in program:
-    while all(grid[i][~0]==" " for i in range(len(grid))):
+    while grid != [[]] and any(grid[i][~0]==" " for i in range(len(grid))):
         for i in range(len(grid)):
-            del grid[i][~0]
-if not "%" in program:
-    while all(grid[0][i]==" " for i in range(len(grid[0]))):
+            if grid[i][~0]==" ":
+                del grid[i][~0]
+if not "%" in program and grid != [[]]:
+    while grid != [] and all(grid[0][i]==" " for i in range(len(grid[0]))):
             del grid[0]
-    while all(grid[~0][i]==" " for i in range(len(grid[0]))):
+    while grid != [] and all(grid[~0][i]==" " for i in range(len(grid[~0]))):
             del grid[~0]
 print('\n'.join(''.join(i for i in j)for j in grid))
