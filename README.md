@@ -10,7 +10,7 @@ There is a grid, which the turtle moves around. The grid expands when the turtle
 |command(s)|explanation|
 |---|---|
 |<,>|turn the turtle left or right, respectively. This affects all commands that move the turtle, because they move the turtle rlatively|
-|U,D,L,R|move the turtle relatively **U**p, **D**own, **L**eft, or **R**ight. if you turn right and move up, you will move right on the grid|
+|u,d,l,r|move the turtle relatively **U**p, **D**own, **L**eft, or **R**ight. if you turn right and move up, you will move right on the grid|
 |[YX]|Loop over the code X while the turtle's cell is not the symbol Y|
 |(YX)|Do the code X if the turtle's cell is Y|
 |{YX}|Loop over the code X while the turtle's cell is Y|
