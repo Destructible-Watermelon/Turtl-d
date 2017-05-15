@@ -208,7 +208,6 @@ while command_counter<len(program):
                     skipping+=1
 
     elif command=="}":
-        command_counter-=1
         skipping=1
         while skipping:
             command_counter-=1
